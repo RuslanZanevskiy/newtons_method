@@ -2,13 +2,13 @@ from math import *
 from typing import Set, List, Callable
 
 
-RANGE_LEFT = -100
-RANGE_RIGHT = 101
-RANGE_STEP = 4.5555555
+RANGE_LEFT = -50
+RANGE_RIGHT = 50
+RANGE_STEP = 1.555555
 STEPS = 150
 DELTA_X = 0.000001
 FLOAT_NUM = 5
-SOLUTION_TRESHOLD = 0.005
+SOLUTION_TRESHOLD = 0.001
 
 
 class Solver:
@@ -69,13 +69,13 @@ def main() -> None:
     d = Solver.get_d_from_f(f)
 
     solutions = [*sorted(Solver.get_solutions(f, d))]
-    error = Solver.get_avr_error(f, solutions)
+    #error = Solver.get_avr_error(f, solutions)
 
     if not solutions:
         print('Solutions for f(x) = 0 not found! May be try different settings.')
     else:
         print(f'Found {len(solutions)} solutions for f(x)=0: ' + ', '.join([str(i) for i in solutions]))
-        print(f'Average error: {error}')
+        #print(f'Average error: {error}')
 
 
 if __name__ == '__main__':
