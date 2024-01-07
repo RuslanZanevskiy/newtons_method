@@ -4,7 +4,7 @@ Newton's method is a technique for solving equations of the form f(x)=0 by succe
 
 ## Quick start
 
-First, clone the repozitory
+First, clone the repository
 
 ```bash
 git clone https://github.com/RuslanZanevskiy/newtons_method.git && cd newtons_method
